@@ -5,12 +5,16 @@ https://docs.openshift.com/enterprise/3.1/install_config/install/deploy_router.h
 
 Confirm the current version of ose-haproxy-router:
 
-# rpm -qi ose-haproxy-router
+```
+rpm -qi ose-haproxy-router
+```
 
-Noting your current ose-haproxy-router version, you can obtain a new haproxy-config.template file from the latest router image by running:
+Noting your current ose-haproxy-router version, you can obtain a new `haproxy-config.template` file from the latest router image by running:
 
-# docker run --rm --interactive=true --tty --entrypoint=cat \
+```
+docker run --rm --interactive=true --tty --entrypoint=cat \
     registry.access.redhat.com/openshift3/ose-haproxy-router:v3.0.2.0 haproxy-config.template
+```
 
 Save this content to a file for use as the basis of your customized template.
 
@@ -25,7 +29,7 @@ For this example, our starting-point OpenShift v3.1.1.6 haproxy template is show
 
 The modified haproxy template with changes to "inter" on lines 217, 227 and 239 is shown here: `conf/haproxy-config.template`
 
-Create a repo following this example with changes to the newly obtained haproxy-config.template
+Create a repo following this example with changes to the newly obtained `haproxy-config.template`
 
 Make sure to edit git uri in the `custom-router/custom-router.yaml` so that the source refers to it's new location.
 
