@@ -2,9 +2,9 @@
 
 This custom haproxy template configuration is an example of how to customize the default v3.1.1.6 haproxy router configuration, doubling the default check intervals (haproxy var "inter") from 5000ms to 10000ms. For more on check intervals see the [haproxy docs for check intervals](https://www.haproxy.com/doc/aloha/7.0/haproxy/healthchecks.html#check-interval).
 
-The default OpenShift v3.1.1.6 haproxy template is shown here: conf/haproxy-config.template-v3.1.1.6
+The default OpenShift v3.1.1.6 haproxy template is shown here: `conf/haproxy-config.template-v3.1.1.6`
 
-The modified haproxy template with changes on lines 217, 227 and 239 is shown here: conf/haproxy-config.template
+The modified haproxy template with changes to "inter" on lines 217, 227 and 239 is shown here: `conf/haproxy-config.template`
 
 If behind a firewall, zip/unzip this repo into a new location in your private git repo.
 
@@ -43,11 +43,11 @@ with:
 image: <your docker registry IP like 172.30.x.x>:5000/default/custom-router:latest
 ```
 
-To reflect further changes:
+To reflect our new changes:
 
 ```
 oc start-build custom-router
 oc deploy router --latest
 ```
 
-Note that the router deployment config doesn't have ImageChange trigger by default, so we need to deploy it manually.
+Note: the router deployment config doesn't have ImageChange trigger by default, so we need to deploy it manually.
