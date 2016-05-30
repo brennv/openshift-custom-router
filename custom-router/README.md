@@ -3,12 +3,6 @@
 For customizing the haproxy router we'll be referring to the docs here:
 https://docs.openshift.com/enterprise/3.1/install_config/install/deploy_router.html#deploying-a-customized-haproxy-router
 
-Confirm the current version of ose-haproxy-router:
-
-```
-rpm -qi ose-haproxy-router
-```
-
 Noting your current ose-haproxy-router version, you can obtain a new `haproxy-config.template` file from the latest router image by running:
 
 ```
