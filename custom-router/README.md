@@ -27,7 +27,7 @@ For more on check intervals see the [haproxy docs on check intervals](https://ww
 
 For this example, our starting-point OpenShift v3.1.1.6 haproxy template is shown here: `conf/haproxy-config.template-v3.1.1.6`
 
-The modified haproxy template with changes to "inter" on lines 217, 227 and 239 is shown here: `conf/haproxy-config.template`
+The example modified haproxy template with changes to "inter" on lines 217, 227 and 239 is shown here: `conf/haproxy-config.template`
 
 Create a repo following this example with changes to the newly obtained `haproxy-config.template`
 
